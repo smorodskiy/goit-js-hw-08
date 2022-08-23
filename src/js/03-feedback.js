@@ -9,7 +9,7 @@ window.addEventListener("load", (event) => {
     const elements = {
         email: document.querySelector('input[name="email"]'),
         message: document.querySelector('textarea[name="message"]'),
-        button: document.querySelector("button"),
+        form: document.querySelector("form"),
     };
 
     // Load saved data
@@ -59,7 +59,7 @@ window.addEventListener("load", (event) => {
     // Events
     elements.email.addEventListener("input", throttled);
     elements.message.addEventListener("input", throttled);
-    elements.button.addEventListener("click", (e) => {
+    elements.form.addEventListener("submit", (e) => {
         postData(e);
     });
 });
