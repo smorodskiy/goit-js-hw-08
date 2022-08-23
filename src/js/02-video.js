@@ -1,4 +1,4 @@
-import {load, save} from "./storage";
+import { load, save } from "./storage";
 import Player from "@vimeo/player";
 import _ from "lodash";
 
@@ -6,6 +6,10 @@ import _ from "lodash";
 const iframe = document.querySelector("iframe");
 // Init instance of player
 const player = new Player(iframe);
+
+// Styled iframe
+iframe.style.width = 100 + "%";
+iframe.style.setProperty("height", "calc(100vh - 100px)");
 
 // Player's event "Time update"
 player.on("timeupdate", (data) => {
