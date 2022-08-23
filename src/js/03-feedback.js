@@ -47,10 +47,10 @@ window.addEventListener("load", (event) => {
         const email = elements.email.value;
         const message = elements.message.value;
 
-        if (email || message) {
+        if (email && message) {
             console.log(`Email: ${email}, Message: ${message}`);
             clearStorage();
-        }
+        } else alert('Fill all fields');
     }
 
     // Throttle on typing
